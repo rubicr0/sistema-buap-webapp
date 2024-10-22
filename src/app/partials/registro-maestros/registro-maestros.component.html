@@ -48,7 +48,11 @@
         <!-- Cambio de input de fecha -->
         <mat-form-field class="mat-input" appearance="outline">
             <mat-label>Fecha de nacimiento</mat-label>
+<<<<<<< HEAD
             <input matInput [matDatepicker]="picker" [(ngModel)]="maestro.fecha_nacimiento" (focus)="picker.open()" placeholder="Agregar fecha" [min]="minDate" [max]="maxDate" (dateChange)="changeFecha($event)" type="string">
+=======
+            <input matInput [matDatepicker]="picker" [(ngModel)]="maestro.fecha_nacimiento" (focus)="picker.open()" placeholder="Agregar fecha" (dateChange)="changeFecha($event)" type="string">
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>

@@ -22,6 +22,7 @@ export class RegistroAlumnosComponent implements OnInit{
   public errors:any={};
   public editar:boolean = false;
   public idUser: Number = 0;
+<<<<<<< HEAD
   public minDate: Date;
   public maxDate: Date;
 
@@ -38,6 +39,17 @@ export class RegistroAlumnosComponent implements OnInit{
     this.alumno = this.alumnosService.esquemaAlumno();
 
     console.log("Datos del admin: ", this.alumno);
+=======
+
+  constructor(
+    private router: Router,
+    public activatedRoute: ActivatedRoute,
+    private alumnosService: AlumnosService,
+  ){}
+
+  ngOnInit(): void {
+    this.alumno = this.alumnosService.esquemaAlumno();
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
   }
 
   public regresar(){
@@ -79,6 +91,7 @@ export class RegistroAlumnosComponent implements OnInit{
     }
     //Validar la contraseña
     if(this.alumno.password == this.alumno.confirmar_password){
+<<<<<<< HEAD
       //Aquí se va a ejecutar la lógica de programación para registrar un usuario
       this.alumnosService.registrarAlumno(this.alumno).subscribe(
         (response)=>{
@@ -96,6 +109,11 @@ export class RegistroAlumnosComponent implements OnInit{
         }
       );
     } else{
+=======
+      //Aquí si todo es correcto vamos a registrar - aquí se manda a llamar al servicio
+
+    }else{
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
       alert("Las contraseñas no coinciden");
       this.alumno.password="";
       this.alumno.confirmar_password="";

@@ -21,8 +21,11 @@ export class RegistroMaestrosComponent implements OnInit{
   public maestro:any = {};
   public errors:any = {};
   public editar:boolean = false;
+<<<<<<< HEAD
   public minDate: Date;
   public maxDate: Date;
+=======
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
 
   //Para el select
   public areas: any[] = [
@@ -50,6 +53,7 @@ export class RegistroMaestrosComponent implements OnInit{
     private maestrosService: MaestrosService,
     private router: Router,
     public activatedRoute: ActivatedRoute,
+<<<<<<< HEAD
   ){
     //limites para la fecha
     this.minDate = new Date(1900, 0, 1);
@@ -59,6 +63,12 @@ export class RegistroMaestrosComponent implements OnInit{
   ngOnInit(): void {
     this.maestro = this.maestrosService.esquemaMaestro();
     console.log("Datos del admin: ", this.maestro);
+=======
+  ){}
+
+  ngOnInit(): void {
+    this.maestro = this.maestrosService.esquemaMaestro();
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
   }
 
   public regresar(){

@@ -23,7 +23,11 @@ export class AlumnosService {
   public esquemaAlumno(){
     return {
       'rol':'',
+<<<<<<< HEAD
       'clave_alumno': '',
+=======
+      'matricula': '',
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
       'first_name': '',
       'last_name': '',
       'email': '',
@@ -43,8 +47,13 @@ export class AlumnosService {
     console.log("Validando alumno... ", data);
     let error: any = [];
 
+<<<<<<< HEAD
     if(!this.validatorService.required(data["clave_alumno"])){
       error["clave_alumno"] = this.errorService.required;
+=======
+    if(!this.validatorService.required(data["matricula"])){
+      error["matricula"] = this.errorService.required;
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
     }
 
     if(!this.validatorService.required(data["first_name"])){
@@ -118,6 +127,10 @@ export class AlumnosService {
   //Aquí van los servicios HTTP
   //Servicio para registrar un nuevo alumno
   public registrarAlumno (data: any): Observable <any>{
+<<<<<<< HEAD
     return this.http.post<any>(`${environment.url_api}/alumno/`,data, httpOptions);
+=======
+    return this.http.post<any>(`${environment.url_api}/alumnos/`,data, httpOptions);
+>>>>>>> 26685ee317825735304b43f23da63d5c660eb1a6
   }
 }
